@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "/tNQLx2hwBQmP1FDboTEdIGh1m4Uo7MasXl42nEMUH5MvkiyJAIuN46559Sgk4DAlMUeMdfnzyXzgx3LGClqPg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.API\\user_todo.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0-rc.2.22476.2\\microsoft.aspnetcore.openapi.7.0.0-rc.2.22476.2.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Kirti singh\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
