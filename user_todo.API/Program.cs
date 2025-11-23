@@ -1,15 +1,39 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using user_todo.Infrastructure.Data;
+using user_todo.Infrastructure.Repositories;
+using user_todo.Infrastructure.Services;
+using user_todo.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// DB context
+var connectionString = builder.Configuration.GetConnectionString("constring");
+builder.Services.AddDbContext<UserTodoDbContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+});
 
+// Infrastructure DI
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// Repo + service (these are also inside AddInfrastructure, but keeping for clarity)
+builder.Services.AddScoped<ITaskRepo, TaskRepo>();
+builder.Services.AddScoped<ITaskService, TaskService>();
+
+// Fix for the exception you got
+builder.Services.AddAuthorization();
+
+// Add controllers + Swagger
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Swagger for development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

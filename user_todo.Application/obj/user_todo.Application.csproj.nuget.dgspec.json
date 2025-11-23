@@ -25,6 +25,69 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj": {
+                "projectPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj",
+        "projectName": "user_todo.Domain",
+        "projectPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj",
+        "packagesPath": "C:\\Users\\Kirti singh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kirti singh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
