@@ -15,36 +15,14 @@ namespace user_todo.Infrastructure.Data
 			{
 				entity.ToTable("Todos");
 
-				entity.HasKey(e => e.Id);
-
-				entity.Property(e => e.Title)
-					.IsRequired()
-					.HasMaxLength(200);
-
-				entity.Property(e => e.Description)
-					.HasColumnType("nvarchar(max)");
-
-				// Store enums as strings to match NVARCHAR columns and CHECK constraints in DB
 				entity.Property(e => e.Priority)
-					.HasConversion<string>()
-					.HasMaxLength(10)
-					.IsRequired();
+					.HasConversion<string>();
 
 				entity.Property(e => e.Category)
-					.HasConversion<string>()
-					.HasMaxLength(50)
-					.IsRequired();
-
-				entity.Property(e => e.IsCompleted)
-					.HasDefaultValue(false);
-
-				entity.Property(e => e.CreatedAt)
-					.HasDefaultValueSql("GETDATE()")
-					.ValueGeneratedOnAdd();
-
-				entity.Property(e => e.UpdatedAt)
-					.IsRequired(false);
+					.HasConversion<string>();
 			});
+
+			base.OnModelCreating(modelBuilder);
 		}
 	}
 }

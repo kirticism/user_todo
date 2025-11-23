@@ -6,6 +6,7 @@ using user_todo.Infrastructure.Data;
 using user_todo.Infrastructure.Repositories;
 using user_todo.Infrastructure.Services;
 using user_todo.Infrastructure;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,18 +17,20 @@ builder.Services.AddDbContext<UserTodoDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
-// Infrastructure DI
+// Centralized infrastructure DI registration (DbContext, repos, services)
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// Repo + service (these are also inside AddInfrastructure, but keeping for clarity)
-builder.Services.AddScoped<ITaskRepo, TaskRepo>();
-builder.Services.AddScoped<ITaskService, TaskService>();
+// Register controllers and configure JSON to accept enum strings
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 // Fix for the exception you got
 builder.Services.AddAuthorization();
 
-// Add controllers + Swagger
-builder.Services.AddControllers();
+// Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -45,5 +48,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();
