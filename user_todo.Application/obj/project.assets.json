@@ -328,19 +328,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kirti singh\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Application\\user_todo.Application.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\workspace\\dotnet_workspace\\user_todo_backend\\user_todo.Application\\user_todo.Application.csproj",
       "projectName": "user_todo.Application",
-      "projectPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Application\\user_todo.Application.csproj",
-      "packagesPath": "C:\\Users\\Kirti singh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Application\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\workspace\\dotnet_workspace\\user_todo_backend\\user_todo.Application\\user_todo.Application.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\workspace\\dotnet_workspace\\user_todo_backend\\user_todo.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kirti singh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -352,8 +352,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj": {
-              "projectPath": "C:\\Users\\Kirti singh\\OneDrive\\Desktop\\Workspace\\dotnet_workspace\\user_todo\\user_todo.Domain\\user_todo.Domain.csproj"
+            "C:\\Users\\DELL\\Desktop\\workspace\\dotnet_workspace\\user_todo_backend\\user_todo.Domain\\user_todo.Domain.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\workspace\\dotnet_workspace\\user_todo_backend\\user_todo.Domain\\user_todo.Domain.csproj"
             }
           }
         }
@@ -389,7 +389,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
       }
     }
   }

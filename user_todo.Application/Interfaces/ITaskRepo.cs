@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using user_todo.Domain.Entities.Model;
+// using user_todo.Infrastructure.Repositories;
 
 namespace user_todo.Infrastructure.Repositories
 {
 	public interface ITaskRepo
 	{
-		Task<(IEnumerable<UserTodoModel> Items, int Total)> GetAllAsync(int pageNumber, int pageSize, string? search = null, string? category = null, string? priority = null);
 		Task<UserTodoModel?> GetByIdAsync(int id);
-		Task<IEnumerable<UserTodoModel>> GetAllSimpleAsync();
+		Task<PagedResult<UserTodoModel>> GetAllAsync(int pageNumber = 1, int pageSize = 5);
 	}
 }

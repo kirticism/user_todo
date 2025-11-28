@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using user_todo.Infrastructure.Data;
 using user_todo.Infrastructure.Repositories;
 using user_todo.Infrastructure.Services;
+using user_todo.Domain.Entities.Model;
+
 
 namespace user_todo.Infrastructure
 {

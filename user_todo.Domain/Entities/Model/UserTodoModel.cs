@@ -1,21 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using user_todo.Domain.Entities.Enum;
 
 namespace user_todo.Domain.Entities.Model
 {
-	public enum PriorityLevel
-	{
-		High,
-		Medium,
-		Low
-	}
-
-	public enum CategoryType
-	{
-		Work,
-		Personal
-	}
-
 	public class UserTodoModel
 	{
 		[Key]

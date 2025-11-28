@@ -13,7 +13,7 @@ namespace user_todo.Infrastructure.Data
 		{
 			modelBuilder.Entity<UserTodoModel>(entity =>
 			{
-				entity.ToTable("Todos");
+				entity.ToTable("UserTasks");
 
 				entity.Property(e => e.Priority)
 					.HasConversion<string>();

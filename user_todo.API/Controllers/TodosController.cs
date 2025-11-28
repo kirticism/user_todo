@@ -22,7 +22,7 @@ namespace user_todo.API.Controllers
 
         // CREATE
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] UserTodoModel model)
+        public async Task<IActionResult> Create(UserTodoModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -30,18 +30,6 @@ namespace user_todo.API.Controllers
             var created = await _service.createTask(model);
 
             return Ok(created);
-        }
-
-        // UPDATE
-        [HttpPut]
-        public async Task<IActionResult> Update(UserTodoModel model)
-        {
-            var ok = await _service.updateTask(model);
-
-            if (!ok)
-                return NotFound();
-
-            return NoContent();
         }
 
         // DELETE
@@ -56,6 +44,7 @@ namespace user_todo.API.Controllers
             return NoContent();
         }
 
+        //GET BY ID
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -67,27 +56,12 @@ namespace user_todo.API.Controllers
             return Ok(task);
         }
 
+        //PAGINATION
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10, [FromQuery] string? search = null, [FromQuery] string? category = null, [FromQuery] string? priority = null)
+        public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 5)
         {
-            var (items, total) = await _repo.GetAllAsync(pageNumber, pageSize, search, category, priority);
-
-            var response = new
-            {
-                Items = items,
-                Total = total,
-                PageNumber = pageNumber,
-                PageSize = pageSize
-            };
-
-            return Ok(response);
-        }
-
-        [HttpGet("simple")]
-        public async Task<IActionResult> GetAllSimple()
-        {
-            var items = await _repo.GetAllSimpleAsync();
-            return Ok(items);
+            var result = await _repo.GetAllAsync(pageNumber, pageSize);
+            return Ok(result);
         }
     }
 }
